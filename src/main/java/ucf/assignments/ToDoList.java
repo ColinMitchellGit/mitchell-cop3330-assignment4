@@ -29,6 +29,10 @@ public class ToDoList {
         this.items.add(item);
     }
 
+    public void removeItem(int index) {
+        this.items.remove(index);
+    }
+
     //Getter which returns all items for TableView
     public ObservableList<ToDoListItem> getItems() {
         return items;
