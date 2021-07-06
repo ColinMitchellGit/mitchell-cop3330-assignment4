@@ -146,6 +146,26 @@ public class ToDoController {
     }
 
     @FXML
+    public void sortByCompleted(ActionEvent actionEvent) {
+        //Copy ObservableList to duplicate temp ObservableList
+        //Create Comparator using ToDoListItem's completed "true" status
+        //Use FXCollections sort() method using Comparator on ObservableList
+        //Set the table to the sorted by completed ObservableList
+    }
+
+    @FXML
+    public void sortByNotCompleted(ActionEvent actionEvent) {
+        //Copy ObservableList to duplicate temp ObservableList
+        //Create Comparator using ToDoListItem's completed "false" status
+        //Use FXCollections sort() method using Comparator on ObservableList
+        //Set the table to the sorted by not completed ObservableList
+    }
+
+    @FXML
+    public void displayAllLists(ActionEvent actionEvent) {
+        //Set the table back to the main ObservableList which is not sorted
+    }
+    @FXML
     public void goToMain(ActionEvent actionEvent) {
         openMainWindow();
     }
