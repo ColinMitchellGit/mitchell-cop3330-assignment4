@@ -1,0 +1,72 @@
+@startuml
+
+class ToDoMain {
+    + main()
+    + start()
+}
+
+class ToDoListController {
+    - tableView
+    - titleColumn
+    - titleField
+    - descriptionField
+    - dateField
+    - newDescriptionColumn
+    - newDueDateColumn
+    - viewTitle
+    - viewdescriptionField
+    - viewItemTableView
+    - viewDescriptionColumn
+    - viewDueDateColumn
+    - viewCompleteColumn
+
+    + openNewList()
+    + addItemToTempList()
+    + removeSelectedItem()
+    + removeSelectedItemView()
+    + markItemAsComplete()
+    + exportCurrentList()
+    + exportAllLists()
+    + loadList()
+    + loadAllLists()
+    + saveCurrentList()
+    + saveNewList()
+    + viewSelectedList()
+    + removeSelectedList()
+    + goToMain()
+    + openMainWindow()
+}
+
+class ToDoList {
+    - title
+    - items
+
+    + getTitle()
+    + setTitle()
+    + addItem()
+    + getItems()
+}
+
+class ToDoListItem {
+    - description
+    - duedate
+    - completed
+
+    + getDescription()
+    + setDescription()
+    + getDuedate()
+    + setDuedate()
+    + isCompleted()
+    + setCompleted()
+}
+
+javafx.ToDoApplication <|-- ToDoMain
+
+ToDoMain - ToDoListController
+
+ToDoListController - ToDoList
+
+ToDoListItem - ToDoListController
+ToDoList - ToDoListItem
+
+@enduml
