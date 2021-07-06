@@ -33,6 +33,9 @@ class ToDoListController {
     + saveNewList()
     + viewSelectedList()
     + removeSelectedList()
+    + sortByCompleted()
+    + sortByNotCompleted()
+    + displayAllLists()
     + goToMain()
     + openMainWindow()
 }
